@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('../partials/head'); %>
+    <title>Usuários</title>
+</head>
+<body>
+    <%- include('../partials/header'); %>
+
+    <main id="users">
+        <h1 class="w-70 text-center">Usuários</h1>
+
+        <a href="/users/register" class="w-20 text-left">
+            <button class="btn btn-success w-100">
+                Novo
+            </button>
+        </a>
+
+        <section class="mb-3">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="w-10">ID</th>
+                        <th class="w-70">Nome</th>
+                        <th class="w-20">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for(var i = 0; i < users.length; i++) { %>
+                        <tr>
+                            <td> <%= i %> </td>
+                            <td> <%= users[i]['name'] %> </td>
+                            <td>
+                                <a href="/users/update/<%= i %>" class="btn btn-info">
+                                    Editar
+                                </a>
+                                
+                                <a href="/users/delete/<%= i %>" class="btn btn-danger">
+                                    Deletar
+                                </a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+    
+    <%- include('../partials/scripts'); %>
+</body>
+</html>

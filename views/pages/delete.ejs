@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <%- include('../partials/head'); %>
+    <title>Deletar Usuário</title>
+</head>
+<body>
+    
+    <%- include('../partials/header'); %>
+
+    <main>
+       
+        <h1>Deletar</h1>
+
+        <p class="w-90">
+            Deseja mesmo deletar esse usuário?
+        </p>
+
+     
+        <table class="w-90">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <%= id %> </td>
+                    <td> <%= user['name'] %> </td>
+                    <td> <%= user['email'] %> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="/users" class="btn btn-danger w-40">
+            Deletar
+        </a>
+
+        <a href="/users" class="btn btn-warning w-40">
+            Cancelar
+        </a>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+    <%- include('../partials/scripts'); %>
+</body>
+</html>

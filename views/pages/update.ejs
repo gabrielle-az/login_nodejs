@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('../partials/head'); %>
+    <title>Atualizar Usuário</title>
+</head>
+<body>
+    <%- include('../partials/header'); %>
+
+    <main>
+        <h1>Editar</h1>
+
+        <form class="w-75" action="/users">
+            <label class="form-group w-100">
+                Nome: 
+                <input type="text" name="name" class="form-control" value="<%= user['name'] %>">
+            </label>
+            <label class="form-group w-100">
+                E-mail:
+                <input type="email" name="email" class="form-control" value="<%= user['email'] %>">
+            </label>
+            <label class="form-group w-100">
+                Senha:
+                <input type="password" name="password" class="form-control" value="<%= user['password'] %>">
+            </label>
+
+            <button type="submit" name="submit" class="btn btn-primary w-100 mt-2 ">Salvar</button>
+        </form>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+    
+    <%- include('../partials/scripts'); %>
+</body>
+</html>

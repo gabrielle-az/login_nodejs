@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <%- include('../partials/head'); %>
+    <title>Minha conta</title>
+</head>
+<body>
+   
+    <%- include('../partials/header'); %>
+
+    <main id="homepage">
+       
+        <h1>Bem-vindo!</h1>
+
+        <section>
+            <h2 class="text-center">Usuários</h2>
+            
+            <% for(var i = 0; i < users.length && i < 4; i++) { %>
+                <p>
+                    <%= users[i]['name'] %>
+                </p>
+            <% } %>
+
+            <a href="/users">
+                <button class="btn btn-primary w-100">
+                    Visualizar
+                </button>
+            </a>
+        </section>
+    </main>
+
+    <!--!Rodapé-->
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+    
+    <!--!Importação do Scripts-->
+    <%- include('../partials/scripts'); %>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('../partials/head'); %>
+    <title>Registrar Usuários</title>
+</head>
+<body>
+    <%- include('../partials/header'); %>
+
+    <main>
+        <h1>Registro</h1>
+
+        <form class="w-75" action="/users">
+            <label class="form-group w-100">
+                Nome: 
+                <input type="text" name="name" class="form-control">
+            </label>
+            <label class="form-group w-100">
+                E-mail:
+                <input type="email" name="email" class="form-control">
+            </label>
+            <label class="form-group w-100">
+                Senha:
+                <input type="password" name="password" class="form-control">
+            </label>
+
+            <button type="submit" name="submit" class="btn btn-primary w-100 mt-2 ">Registar</button>
+        </form>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+    <%- include('../partials/scripts'); %>
+</body>
+</html>
